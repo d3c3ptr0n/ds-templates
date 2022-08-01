@@ -21,6 +21,11 @@ public:
 };
 
 void insertAtHead(Node* &head, int data) {
+	if (head == NULL) {
+		Node* temp = new Node(data);
+		head = temp;
+		return;
+	}
 	Node* temp = new Node(data);
 	temp -> next = head;
 	head = temp;
